@@ -18,3 +18,17 @@ eureka:
 spring:
   application:
     name: CurrencyExchangeMS
+
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://zipkin:9411/
+
+feign:
+  hystrix:
+    enabled: true
+
+
+

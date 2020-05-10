@@ -13,17 +13,17 @@ eureka:
     fetchRegistry: true
     prefer-same-zone-eureka: true
     serviceUrl:
-      defaultZone: ${CurrencyExchangeMS.eureka.url:http://eurekaserver-service:8761/eureka}
+      defaultZone: ${CurrencyExchangeMS.eureka.url:http://localhost:8761/eureka}
 
 spring:
   application:
     name: CurrencyExchangeMS
-
   sleuth:
     trace-id128: true
     sampler:
       probability: 1.0
-  
+  zipkin:
+    base-url: http://zipkin:9411/
 
 feign:
   hystrix:
